@@ -14,14 +14,21 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
     /*
     Declarar instancias globales
     */
-    private RecyclerView recycler;
+
+    @Bind(R.id.reciclador)
+    RecyclerView recycler;
+
+
     private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager lManager;
+
 
 
 
@@ -41,13 +48,13 @@ public class MainActivity extends AppCompatActivity {
         items.add(new MiClaseParaLosDatos(R.drawable.fate, "Fate Stay Night", 342));
         items.add(new MiClaseParaLosDatos(R.drawable.nhk, "Welcome to the NHK", 645));
         items.add(new MiClaseParaLosDatos(R.drawable.suzumiya, "Suzumiya Haruhi", 459));
-
+        ButterKnife.bind(this);
         // Obtener el Recycler
-        recycler = (RecyclerView) findViewById(R.id.reciclador);
+//        recycler = (RecyclerView) findViewById(R.id.reciclador);
         recycler.setHasFixedSize(true);
 
         // Usar un administrador para LinearLayout
-        lManager = new LinearLayoutManager(this);
+        RecyclerView.LayoutManager lManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(lManager);
 
         // Crear un nuevo adaptador
