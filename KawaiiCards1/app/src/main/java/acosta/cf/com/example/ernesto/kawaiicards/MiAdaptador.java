@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 /**
  * Created by Ernesto on 23/12/2015.
  */
@@ -42,15 +45,20 @@ public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.MiHolder> {
 
     public static class MiHolder extends RecyclerView.ViewHolder {
         // Campos respectivos de un item
+        @Bind(R.id.imagen)
         public ImageView imagen;
+
+        @Bind(R.id.nombre)
         public TextView nombre;
+
+        @Bind(R.id.visitas)
         public TextView visitas;
 
         public MiHolder(View v) {
             super(v);
-            imagen = (ImageView) v.findViewById(R.id.imagen);
-            nombre = (TextView) v.findViewById(R.id.nombre);
-            visitas = (TextView) v.findViewById(R.id.visitas);
+
+            ButterKnife.bind(this,v);
+
         }
     }
 }
