@@ -12,5 +12,4 @@
     tools:context="acosta.cf.com.example.ernesto.kawaiicards.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <include layout="@layout/mi_recycler_en_la_vista" />
 </RelativeLayout>
