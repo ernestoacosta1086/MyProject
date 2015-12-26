@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -25,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
     Declarar instancias globales
     */
 
-    @Bind(R.id.toolbar)
-    Toolbar toolbar;
+    @Bind(R.id.button_recycler)
+    Button button_recycer;
 
     private RecyclerView.Adapter adapter;
 
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        toolbar.setOnClickListener(new View.OnClickListener() {
+        button_recycer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
