@@ -16,4 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Prueba de como se usa todo esto"/>
+
+    <include layout="@layout/mi_recycler_en_la_vista" />
 </RelativeLayout>
