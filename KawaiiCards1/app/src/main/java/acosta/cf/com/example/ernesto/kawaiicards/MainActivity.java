@@ -1,6 +1,7 @@
 package acosta.cf.com.example.ernesto.kawaiicards;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,16 +19,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
+import butterknife.BindColor;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    /*
-    Declarar instancias globales
-    */
-
     @Bind(R.id.button_recycler)
-    Button button_recycer;
+    List<Button> button_recycer;
+
+    @Bind(R.id.google_maps_button)
+    Button button_google_map;
 
     private RecyclerView.Adapter adapter;
 
@@ -35,19 +37,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ButterKnife.bind(this);
-        button_recycer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent myIntent = new Intent(getBaseContext(),RecyclerActivity.class);
-                startActivity(myIntent);
-
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
+    @OnClick(R.id.button_recycler)
+    public void toRecyclerAct(){
+        Intent intent = new Intent(getBaseContext(), RecyclerActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.google_maps_button)
+    public void toGoogleAct(){
+        Intent intent = new Intent(getBaseContext(), GoogleMapsActivity.class);
+        startActivity(intent);
+    }
 
 }
