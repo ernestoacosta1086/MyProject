@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.reciclador)
     RecyclerView recycler;
 
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
 
     private RecyclerView.Adapter adapter;
 
@@ -36,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
 
         // Inicializar Animes
@@ -60,6 +65,15 @@ public class MainActivity extends AppCompatActivity {
         // Crear un nuevo adaptador
         adapter = new MiAdaptador(items);
         recycler.setAdapter(adapter);
+
+        
+        toolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
     }
 
 
