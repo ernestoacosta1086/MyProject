@@ -1,5 +1,6 @@
 package acosta.cf.com.example.ernesto.kawaiicards;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -66,10 +67,14 @@ public class MainActivity extends AppCompatActivity {
         adapter = new MiAdaptador(items);
         recycler.setAdapter(adapter);
 
-        
+
         toolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Intent myIntent = new Intent(getBaseContext(),RecyclerActivity.class);
+                startActivity(myIntent);
+                
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
