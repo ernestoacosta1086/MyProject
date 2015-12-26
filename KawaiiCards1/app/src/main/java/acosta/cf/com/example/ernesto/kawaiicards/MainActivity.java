@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent myIntent = new Intent(getBaseContext(),RecyclerActivity.class);
                 startActivity(myIntent);
-                
+
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
