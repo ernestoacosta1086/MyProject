@@ -3,11 +3,11 @@ package acosta.cf.com.example.ernesto.kawaiicards;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class GoogleMapsActivity extends AppCompatActivity {
+public class ExampleActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_google_maps);
+        setContentView(R.layout.example_activity);
     }
 }

@@ -4,4 +4,5 @@
     <string name="title_activity_recycler">RecyclerActivity</string>
     <string name="button_recycler">Ver un Recycler</string>
     <string name="button_google_maps">Google Maps Button</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
