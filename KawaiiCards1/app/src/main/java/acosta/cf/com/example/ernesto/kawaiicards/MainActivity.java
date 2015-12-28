@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.google_maps_button)
     public void toGoogleAct(){
-        Intent intent = new Intent(getBaseContext(), ExampleActivity.class);
+        Intent intent = new Intent(getBaseContext(), MapsActivity.class);
         startActivity(intent);
     }
 
